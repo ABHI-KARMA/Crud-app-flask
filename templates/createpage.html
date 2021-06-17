@@ -18,20 +18,19 @@
             <label for="exampleInputPassword1" class="form-label">Position</label>
             <input type="text" class="form-control" id="exampleInputPassword1" name="position">
         </div>
-        <button type="submit" value="Submit" class="btn btn-primary">Submit</button>
+        <button type="submit" id="submitbutton" value="Submit" class="btn btn-primary">Submit</button>
     </form>
     <script type="text/javascript">
         var f = document.getElementById('createForm');
-        f.onsubmit =  e =>{
+        document.getElementById('submitbutton').addEventListener('click',  e =>{
             e.preventDefault();
         var u_id = document.getElementById('userid');
         if(u_id.value.trim().length > 12){
             alert(`You have entered ${u_id.value.trim()}, which is more then permisible limit. Please enter value less then or equal to 12`);
-            break;
             }else{
                 f.submit();
             }
-        }     
+        });     
     </script>
     
 </div>
