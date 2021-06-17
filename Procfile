@@ -1,1 +1,1 @@
-web: gunicorn -b :$PORT pp:crud_app
+web: gunicorn -b :$PORT app:crud_app
