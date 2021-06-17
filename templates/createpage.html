@@ -26,7 +26,9 @@
             e.preventDefault();
         var u_id = document.getElementById('userid');
             u_id.value = parseInt(u_id.value);
-            if(typeof(u_id.value) != NaN){
+            var v = parseInt(u_id.value);
+            console.log(typeof(v));
+            if(typeof(v) != NaN){
                 alert(`Value entered ${u_id.value} is not a valid value, Please enter numeric values only!!!`);
             }else{
         if(u_id.value.trim().length > 12){
