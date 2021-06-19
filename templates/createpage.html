@@ -25,16 +25,15 @@
         document.getElementById('submitbutton').addEventListener('click',  e =>{
             e.preventDefault();
         var u_id = document.getElementById('userid');
-            u_id.value = parseInt(u_id.value);
-            var v = parseInt(u_id.value);
             console.log(typeof(v));
-            if(typeof(v) == NaN){
+            if(typeof(u_id.value) == "string"){
                 alert(`Value entered ${u_id.value} is not a valid value, Please enter numeric values only!!!`);
             }else{
         if(u_id.value.trim().length > 12){
             alert(`You have entered ${u_id.value.trim()}, which is more then permisible limit. Please enter value less then or equal to 12`);
             }else{
-                f.submit();
+                  u_id.value = parseInt(u_id.value);
+              //  f.submit();
             }
             }
         });     
